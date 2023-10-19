@@ -2,7 +2,9 @@
 
 # Technology used
   Docker
+  
   Maven
+  
   Nginx
 
 # How to run locally
