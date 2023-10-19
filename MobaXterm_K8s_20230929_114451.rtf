@@ -1,0 +1,250 @@
+{\rtf1\ansi\ansicpg1252\deff0\deflang1033{\fonttbl{\f0\fmodern Consolas;}{\f1\fnil\fcharset129 Courier New;}}
+{\colortbl ;\red20\green20\blue20;\red142\green142\blue142;\red18\green18\blue18;\red245\green245\blue245;\red170\green64\blue64;\red85\green85\blue85;\red170\green51\blue170;}
+\viewkind4\uc1\pard\f0\fs20 Authenticating with public key "Imported-Openssh-Key"\cf1\highlight2 
+\par \cf0\highlight0    ,     #_\cf1\highlight2 
+\par \cf0\highlight0    ~\\_  ####_        Amazon Linux 2023\cf1\highlight2 
+\par \cf0\highlight0   ~~  \\_#####\\\cf1\highlight2 
+\par \cf0\highlight0   ~~     \\###|\cf1\highlight2 
+\par \cf0\highlight0   ~~       \\#/ ___   https://aws.amazon.com/linux/amazon-linux-2023\cf1\highlight2 
+\par \cf0\highlight0    ~~       V~' '->\cf1\highlight2 
+\par \cf0\highlight0     ~~~         /\cf1\highlight2 
+\par \cf0\highlight0       ~~._.   _/\cf1\highlight2 
+\par \cf0\highlight0          _/ _/\cf1\highlight2 
+\par \cf0\highlight0        _/m/'\cf1\highlight2 
+\par \cf0\highlight0 Last login: Fri Sep 29 07:29:07 2023 from 92.98.159.203\cf1\highlight2 
+\par \cf0\highlight0 [ec2-user@k8s ~]$\cf1\highlight2 
+\par \cf0\highlight0 [ec2-user@k8s ~]$\cf1\highlight2 
+\par \cf0\highlight0 [ec2-user@k8s ~]$\cf1\highlight2 
+\par \cf0\highlight0 [ec2-user@k8s ~]$ sudo -i\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]#\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]#\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]# systemctl status kubelet.service\cf1\highlight2 
+\par \cf0\highlight0\u9679? kubelet.service - kubelet: The Kubernetes Node Agent\cf1\highlight2 
+\par \cf0\highlight0      Loaded: loaded (/usr/lib/systemd/system/kubelet.service; enabled; preset: disabled)\cf1\highlight2 
+\par \cf0\highlight0     Drop-In: /usr/lib/systemd/system/kubelet.service.d\cf1\highlight2 
+\par \cf0\highlight0              \u9492?\u9472?10-kubeadm.conf\cf1\highlight2 
+\par \cf0\highlight0      Active: activating (auto-restart) (Result: exit-code) since Fri 2023-09-29 07:40:21 UTC; 4s ago\cf1\highlight2 
+\par \cf0\highlight0        Docs: https://kubernetes.io/docs/\cf1\highlight2 
+\par \cf0\highlight0     Process: 2477 ExecStart=/usr/bin/kubelet $KUBELET_KUBECONFIG_ARGS $KUBELET_CONFIG_ARGS $KUBELET_KUBEADM_ARGS $KUBELET_EXTRA_ARGS (code\cf3\highlight4 >\cf1\highlight2 
+\par \cf0\highlight0    Main PID: 2477 (code=exited, status=1/FAILURE)\cf1\highlight2 
+\par \cf0\highlight0         CPU: 78ms\cf1\highlight2 
+\par 
+\par \cf0\highlight0 [root@k8s ~]# systemctl stop kubelet.service\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]#\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]#\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]# systemctl start kubelet.service\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]#\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]#\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]# systemctl status kubelet.service\cf1\highlight2 
+\par \cf0\highlight0\u9679? kubelet.service - kubelet: The Kubernetes Node Agent\cf1\highlight2 
+\par \cf0\highlight0      Loaded: loaded (/usr/lib/systemd/system/kubelet.service; enabled; preset: disabled)\cf1\highlight2 
+\par \cf0\highlight0     Drop-In: /usr/lib/systemd/system/kubelet.service.d\cf1\highlight2 
+\par \cf0\highlight0              \u9492?\u9472?10-kubeadm.conf\cf1\highlight2 
+\par \cf0\highlight0      Active: activating (auto-restart) (Result: exit-code) since Fri 2023-09-29 07:40:37 UTC; 2s ago\cf1\highlight2 
+\par \cf0\highlight0        Docs: https://kubernetes.io/docs/\cf1\highlight2 
+\par \cf0\highlight0     Process: 2654 ExecStart=/usr/bin/kubelet $KUBELET_KUBECONFIG_ARGS $KUBELET_CONFIG_ARGS $KUBELET_KUBEADM_ARGS $KUBELET_EXTRA_ARGS (code\cf3\highlight4 >\cf1\highlight2 
+\par \cf0\highlight0    Main PID: 2654 (code=exited, status=1/FAILURE)\cf1\highlight2 
+\par \cf0\highlight0         CPU: 78ms\cf1\highlight2 
+\par 
+\par \cf0\highlight0 [root@k8s ~]#\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]#\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]#\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]#\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]# systemctl stop kubelet.service\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]#\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]#\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]# systemctl stop docker\cf1\highlight2 
+\par \cf0\highlight0 Warning: Stopping docker.service, but it can still be activated by:\cf1\highlight2 
+\par \cf0\highlight0   docker.socket\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]#\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]#\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]#\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]# docker.socket\cf1\highlight2 
+\par \cf0\highlight0 -bash: docker.socket: command not found\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]#\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]#\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]# yum remove kubeadm.x86_64 m\cf1\highlight2 
+\par \cf0\highlight0 No match for argument: \b m\cf1\highlight2\b0 
+\par \cf0\highlight0 Dependencies resolved.\cf1\highlight2 
+\par \cf0\highlight0 ===========================================================================================================================================\cf1\highlight2 
+\par \cf0\highlight0  Package                        Architecture                Version                                 Repository                        Size\cf1\highlight2 
+\par \cf0\highlight0 ===========================================================================================================================================\cf1\highlight2 
+\par \cf0\highlight0 Removing:\cf1\highlight2 
+\par \cf0\highlight0  \cf5 kubeadm                       \cf0  x86_64                      1.28.2-150500.1.1                       @kubernetes                       48 M\cf1\highlight2 
+\par \cf0\highlight0 Removing unused dependencies:\cf1\highlight2 
+\par \cf0\highlight0  \cf5 cri-tools                     \cf0  x86_64                      1.28.0-150500.1.1                       @kubernetes                       41 M\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Transaction Summary\cf1\highlight2 
+\par \cf0\highlight0 ===========================================================================================================================================\cf1\highlight2 
+\par \cf0\highlight0 Remove  2 Packages\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Freed space: 90 M\cf1\highlight2 
+\par \cf0\highlight0 Is this ok [y/N]: ^COperation aborted.\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]# yum delete kubeadm.x86_64\cf1\highlight2 
+\par \cf0\highlight0 No such command: delete. Please use /usr/bin/yum --help\cf1\highlight2 
+\par \cf0\highlight0 It could be a YUM plugin command, try: "yum install 'dnf-command(delete)'"\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]#\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]#\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]#\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]# yum remove kubeadm.x86_64\cf1\highlight2 
+\par \cf0\highlight0 Dependencies resolved.\cf1\highlight2 
+\par \cf0\highlight0 ===========================================================================================================================================\cf1\highlight2 
+\par \cf0\highlight0  Package                        Architecture                Version                                 Repository                        Size\cf1\highlight2 
+\par \cf0\highlight0 ===========================================================================================================================================\cf1\highlight2 
+\par \cf0\highlight0 Removing:\cf1\highlight2 
+\par \cf0\highlight0  \cf5 kubeadm                       \cf0  x86_64                      1.28.2-150500.1.1                       @kubernetes                       48 M\cf1\highlight2 
+\par \cf0\highlight0 Removing unused dependencies:\cf1\highlight2 
+\par \cf0\highlight0  \cf5 cri-tools                     \cf0  x86_64                      1.28.0-150500.1.1                       @kubernetes                       41 M\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Transaction Summary\cf1\highlight2 
+\par \cf0\highlight0 ===========================================================================================================================================\cf1\highlight2 
+\par \cf0\highlight0 Remove  2 Packages\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Freed space: 90 M\cf1\highlight2 
+\par \cf0\highlight0 Is this ok [y/N]: ^COperation aborted.\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]#\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]#\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]#\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]#\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]# yum history\cf1\highlight2 
+\par \cf0\highlight0 ID     | Command line                                                                         | Date and time    | Action(s)      | Altered\cf1\highlight2 
+\par \cf0\highlight0 -------------------------------------------------------------------------------------------------------------------------------------------\cf1\highlight2 
+\par \cf0\highlight0     10 | install yum-utils device-mapper-persistent-data.x86_64 lvm2                          | 2023-09-29 07:34 | Install        |    6 EE\cf1\highlight2 
+\par \cf0\highlight0      9 | install -y kubelet kubeadm kubectl --disableexcludes=kubernetes                      | 2023-09-29 07:17 | Install        |   10\cf1\highlight2 
+\par \cf0\highlight0      8 | history undo 6                                                                       | 2023-09-29 07:16 | Removed        |   10\cf1\highlight2 
+\par \cf0\highlight0      7 | install rsyslog                                                                      | 2023-09-29 07:03 | Install        |    4 EE\cf1\highlight2 
+\par \cf0\highlight0      6 | install kubeadm                                                                      | 2023-09-29 06:51 | Install        |   10\cf1\highlight2 
+\par \cf0\highlight0      5 | history undo 2                                                                       | 2023-09-29 06:50 | Removed        |    7\cf1\highlight2 
+\par \cf0\highlight0      4 | history undo 3                                                                       | 2023-09-29 06:49 | Removed        |    3\cf1\highlight2 
+\par \cf0\highlight0      3 | install kubeadm                                                                      | 2023-09-29 06:48 | Install        |    3\cf1\highlight2 
+\par \cf0\highlight0      2 | install kubelet                                                                      | 2023-09-29 06:48 | Install        |    7  <\cf1\highlight2 
+\par \cf0\highlight0      1 | install docker -y                                                                    | 2023-09-29 06:39 | Install        |   10 >E\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]# yum history undo 6\cf1\highlight2 
+\par \cf0\highlight0 Last metadata expiration check: 0:19:20 ago on Fri Sep 29 07:22:53 2023.\cf1\highlight2 
+\par \cf0\highlight0 Dependencies resolved.\cf1\highlight2 
+\par \cf0\highlight0 ===========================================================================================================================================\cf1\highlight2 
+\par \cf0\highlight0  Package                                Architecture           Version                                  Repository                    Size\cf1\highlight2 
+\par \cf0\highlight0 ===========================================================================================================================================\cf1\highlight2 
+\par \cf0\highlight0 Removing:\cf1\highlight2 
+\par \cf0\highlight0  \cf5 kubeadm                               \cf0  x86_64                 1.28.2-150500.1.1                        @kubernetes                   48 M\cf1\highlight2 
+\par \cf0\highlight0 Removing dependent packages:\cf1\highlight2 
+\par \cf0\highlight0  \cf5 conntrack-tools                       \cf0  x86_64                 1.4.6-2.amzn2023.0.2                     @amazonlinux                 656 k\cf1\highlight2 
+\par \cf0\highlight0  \cf5 cri-tools                             \cf0  x86_64                 1.28.0-150500.1.1                        @kubernetes                   41 M\cf1\highlight2 
+\par \cf0\highlight0  \cf5 kubectl                               \cf0  x86_64                 1.28.2-150500.1.1                        @kubernetes                   48 M\cf1\highlight2 
+\par \cf0\highlight0  \cf5 kubelet                               \cf0  x86_64                 1.28.2-150500.1.1                        @kubernetes                  106 M\cf1\highlight2 
+\par \cf0\highlight0  \cf5 kubernetes-cni                        \cf0  x86_64                 1.2.0-150500.2.1                         @kubernetes                   49 M\cf1\highlight2 
+\par \cf0\highlight0  \cf5 libnetfilter_cthelper                 \cf0  x86_64                 1.0.0-21.amzn2023.0.2                    @amazonlinux                  43 k\cf1\highlight2 
+\par \cf0\highlight0  \cf5 libnetfilter_cttimeout                \cf0  x86_64                 1.0.0-19.amzn2023.0.2                    @amazonlinux                  43 k\cf1\highlight2 
+\par \cf0\highlight0  \cf5 libnetfilter_queue                    \cf0  x86_64                 1.0.5-2.amzn2023.0.2                     @amazonlinux                  57 k\cf1\highlight2 
+\par \cf0\highlight0  \cf5 socat                                 \cf0  x86_64                 1.7.4.2-1.amzn2023.0.2                   @amazonlinux                 1.1 M\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Transaction Summary\cf1\highlight2 
+\par \cf0\highlight0 ===========================================================================================================================================\cf1\highlight2 
+\par \cf0\highlight0 Remove  10 Packages\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Freed space: 294 M\cf1\highlight2 
+\par \cf0\highlight0 Is this ok [y/N]: y\cf1\highlight2 
+\par \cf0\highlight0 Running transaction check\cf1\highlight2 
+\par \cf0\highlight0 Transaction check succeeded.\cf1\highlight2 
+\par \cf0\highlight0 Running transaction test\cf1\highlight2 
+\par \cf0\highlight0 Transaction test succeeded.\cf1\highlight2 
+\par \cf0\highlight0 Running transaction\cf1\highlight2 
+\par \cf0\highlight0   Preparing        :                                                                                                                   1/1\cf1\highlight2 
+\par \cf0\highlight0   Erasing          : kubeadm-1.28.2-150500.1.1.x86_64                                                                                 1/10\cf1\highlight2 
+\par \cf0\highlight0   Running scriptlet: kubelet-1.28.2-150500.1.1.x86_64                                                                                 2/10\cf1\highlight2 
+\par \cf0\highlight0 Removed "/etc/systemd/system/multi-user.target.wants/kubelet.service".\cf1\highlight2 
+\par \cf0\highlight0 Warning: The unit file, source configuration file or drop-ins of kubelet.service changed on disk. Run 'systemctl daemon-reload' to reload units.\cf1\highlight2 
+\par 
+\par \cf0\highlight0   Erasing          : kubelet-1.28.2-150500.1.1.x86_64                                                                                 2/10\cf1\highlight2 
+\par \cf0\highlight0   Running scriptlet: kubelet-1.28.2-150500.1.1.x86_64                                                                                 2/10\cf1\highlight2 
+\par \cf0\highlight0   Erasing          : kubernetes-cni-1.2.0-150500.2.1.x86_64                                                                           3/10\cf1\highlight2 
+\par \cf0\highlight0   Erasing          : cri-tools-1.28.0-150500.1.1.x86_64                                                                               4/10\cf1\highlight2 
+\par \cf0\highlight0   Erasing          : kubectl-1.28.2-150500.1.1.x86_64                                                                                 5/10\cf1\highlight2 
+\par \cf0\highlight0   Running scriptlet: conntrack-tools-1.4.6-2.amzn2023.0.2.x86_64                                                                      6/10\cf1\highlight2 
+\par \cf0\highlight0   Erasing          : conntrack-tools-1.4.6-2.amzn2023.0.2.x86_64                                                                      6/10\cf1\highlight2 
+\par \cf0\highlight0   Running scriptlet: conntrack-tools-1.4.6-2.amzn2023.0.2.x86_64                                                                      6/10\cf1\highlight2 
+\par \cf0\highlight0   Erasing          : libnetfilter_cthelper-1.0.0-21.amzn2023.0.2.x86_64                                                               7/10\cf1\highlight2 
+\par \cf0\highlight0   Erasing          : libnetfilter_cttimeout-1.0.0-19.amzn2023.0.2.x86_64                                                              8/10\cf1\highlight2 
+\par \cf0\highlight0   Erasing          : libnetfilter_queue-1.0.5-2.amzn2023.0.2.x86_64                                                                   9/10\cf1\highlight2 
+\par \cf0\highlight0   Erasing          : socat-1.7.4.2-1.amzn2023.0.2.x86_64                                                                             10/10\cf1\highlight2 
+\par \cf0\highlight0   Running scriptlet: socat-1.7.4.2-1.amzn2023.0.2.x86_64                                                                             10/10\cf1\highlight2 
+\par \cf0\highlight0   Verifying        : conntrack-tools-1.4.6-2.amzn2023.0.2.x86_64                                                                      1/10\cf1\highlight2 
+\par \cf0\highlight0   Verifying        : cri-tools-1.28.0-150500.1.1.x86_64                                                                               2/10\cf1\highlight2 
+\par \cf0\highlight0   Verifying        : kubeadm-1.28.2-150500.1.1.x86_64                                                                                 3/10\cf1\highlight2 
+\par \cf0\highlight0   Verifying        : kubectl-1.28.2-150500.1.1.x86_64                                                                                 4/10\cf1\highlight2 
+\par \cf0\highlight0   Verifying        : kubelet-1.28.2-150500.1.1.x86_64                                                                                 5/10\cf1\highlight2 
+\par \cf0\highlight0   Verifying        : kubernetes-cni-1.2.0-150500.2.1.x86_64                                                                           6/10\cf1\highlight2 
+\par \cf0\highlight0   Verifying        : libnetfilter_cthelper-1.0.0-21.amzn2023.0.2.x86_64                                                               7/10\cf1\highlight2 
+\par \cf0\highlight0   Verifying        : libnetfilter_cttimeout-1.0.0-19.amzn2023.0.2.x86_64                                                              8/10\cf1\highlight2 
+\par \cf0\highlight0   Verifying        : libnetfilter_queue-1.0.5-2.amzn2023.0.2.x86_64                                                                   9/10\cf1\highlight2 
+\par \cf0\highlight0   Verifying        : socat-1.7.4.2-1.amzn2023.0.2.x86_64                                                                             10/10\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Removed:\cf1\highlight2 
+\par \cf0\highlight0   conntrack-tools-1.4.6-2.amzn2023.0.2.x86_64                         cri-tools-1.28.0-150500.1.1.x86_64\cf1\highlight2 
+\par \cf0\highlight0   kubeadm-1.28.2-150500.1.1.x86_64                                    kubectl-1.28.2-150500.1.1.x86_64\cf1\highlight2 
+\par \cf0\highlight0   kubelet-1.28.2-150500.1.1.x86_64                                    kubernetes-cni-1.2.0-150500.2.1.x86_64\cf1\highlight2 
+\par \cf0\highlight0   libnetfilter_cthelper-1.0.0-21.amzn2023.0.2.x86_64                  libnetfilter_cttimeout-1.0.0-19.amzn2023.0.2.x86_64\cf1\highlight2 
+\par \cf0\highlight0   libnetfilter_queue-1.0.5-2.amzn2023.0.2.x86_64                      socat-1.7.4.2-1.amzn2023.0.2.x86_64\cf1\highlight2 
+\par 
+\par \cf0\highlight0 Complete!\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]# ll /var/lib/kubelet/config.yaml\cf1\highlight2 
+\par \cf0\highlight0 -rw-r--r--. 1 root root 0 Sep 29 07:27 /var/lib/kubelet/config.yaml\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]#\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]#\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]# rm -rf /var/lib/kubelet/\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]#\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]#\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]# ll /var/lib/kubelet/config.yaml\cf1\highlight2 
+\par \cf0\highlight0 ls: cannot access '/var/lib/kubelet/config.yaml': No such file or directory\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]#\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]#\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]#\cf1\highlight2 
+\par \cf0\highlight0 [root@k8s ~]# sudo reboot\cf1\highlight2 
+\par 
+\par \cf5\highlight0 Remote side unexpectedly closed network connection\cf1\highlight2 
+\par 
+\par \cf6\highlight0\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\cf1\highlight2 
+\par 
+\par \cf5\highlight0 Session stopped\cf1\highlight2 
+\par \cf0\highlight0     - Press \cf7 <return>\cf0  to exit tab\cf1\highlight2 
+\par \cf0\highlight0     - Press \cf7 R\cf0  to restart session\cf1\highlight2 
+\par \cf0\highlight0     - Press \cf7 S\cf0  to save terminal output to file\cf1\highlight2 
+\par 
+\par \cf5\highlight0 Network error: Connection timed out\cf1\highlight2 
+\par 
+\par \cf6\highlight0\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\cf1\highlight2 
+\par 
+\par \cf5\highlight0 Session stopped\cf1\highlight2 
+\par \cf0\highlight0     - Press \cf7 <return>\cf0  to exit tab\cf1\highlight2 
+\par \cf0\highlight0     - Press \cf7 R\cf0  to restart session\cf1\highlight2 
+\par \cf0\highlight0     - Press \cf7 S\cf0  to save terminal output to file\cf1\highlight2 
+\par 
+\par \cf5\highlight0 Network error: Connection timed out\cf1\highlight2 
+\par 
+\par \cf6\highlight0\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\cf1\highlight2 
+\par 
+\par \cf5\highlight0 Session stopped\cf1\highlight2 
+\par \cf0\highlight0     - Press \cf7 <return>\cf0  to exit tab\cf1\highlight2 
+\par \cf0\highlight0     - Press \cf7 R\cf0  to restart session\cf1\highlight2 
+\par \cf0\highlight0     - Press \cf7 S\cf0  to save terminal output to file\cf1\highlight2 
+\par 
+\par \cf5\highlight0 Network error: Connection timed out\cf1\highlight2 
+\par 
+\par \cf6\highlight0\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\cf1\highlight2 
+\par 
+\par \cf5\highlight0 Session stopped\cf1\highlight2 
+\par \cf0\highlight0     - Press \cf7 <return>\cf0  to exit tab\cf1\highlight2 
+\par \cf0\highlight0     - Press \cf7 R\cf0  to restart session\cf1\highlight2 
+\par \cf0\highlight0     - Press \cf7 S\cf0  to save terminal output to file\cf1\highlight2 
+\par 
+\par \cf5\highlight0 Network error: Connection refused\cf1\highlight2 
+\par 
+\par \cf6\highlight0\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\u9472?\cf1\highlight2 
+\par 
+\par \cf5\highlight0 Session stopped\cf1\highlight2 
+\par \cf0\highlight0     - Press \cf7 <return>\cf0  to exit tab\cf1\highlight2 
+\par \cf0\highlight0     - Press \cf7 R\cf0  to restart session\cf1\highlight2 
+\par \cf0\highlight0     - Press \cf7 S\cf0  to save terminal output to file\cf1\highlight2 
+\par \pard\cf0\highlight0\f1\fs14 
+\par }
+ 
